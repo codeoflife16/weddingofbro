@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>শুভ বিবাহিত জীবন | Shyan & Piya</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --maroon:#6f0b1b;
+  --gold:#cfa94a;
+  --paper:#f6eedc;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  background:radial-gradient(circle at top,#3b0000,#120000);
+  font-family:'Noto Serif Bengali', serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+/* Mandala */
+.mandala{
+  position:fixed;
+  width:600px;
+  height:600px;
+  border:2px dotted rgba(207,169,74,0.25);
+  border-radius:50%;
+  animation:rotate 40s linear infinite;
+}
+
+/* Scroll wrapper */
+.scroll-wrapper{
+  perspective:1400px;
+  z-index:2;
+}
+
+/* Scroll */
+.scroll{
+  width:92%;
+  max-width:900px;
+  background:var(--paper);
+  border-radius:22px;
+  padding:45px;
+  box-shadow:0 30px 60px rgba(0,0,0,.55);
+  transform-origin:top;
+  transform:scaleY(0);
+  animation:unroll 2.4s ease forwards;
+  position:relative;
+}
+
+/* Paper texture */
+.scroll::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0,0,0,0.03),
+      rgba(0,0,0,0.03) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  border-radius:22px;
+}
+
+/* Border */
+.scroll::after{
+  content:"";
+  position:absolute;
+  inset:14px;
+  border:3px double var(--gold);
+  border-radius:16px;
+}
+
+/* Header */
+.title{
+  text-align:center;
+  color:var(--maroon);
+}
+
+.title h1{
+  font-size:44px;
+  margin:0;
+  text-shadow:0 0 12px rgba(207,169,74,.6);
+}
+
+.names{
+  text-align:center;
+  margin:30px 0;
+  font-size:44px;
+  color:var(--gold);
+  font-weight:600;
+}
+
+.names span{
+  color:var(--maroon);
+  font-size:32px;
+  margin:0 12px;
+}
+
+/* Photos */
+.photos{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin:30px 0;
+  flex-wrap:wrap;
+}
+
+.photo{
+  width:220px;
+  height:270px;
+  border:4px solid var(--gold);
+  border-radius:14px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* Message */
+.message{
+  font-size:22px;
+  line-height:1.9;
+  color:#4b0000;
+  padding:25px 40px;
+  text-align:justify;
+  opacity:0;
+  animation:fadeIn 2s ease forwards;
+  animation-delay:1.6s;
+}
+
+/* Signature */
+.signature{
+  text-align:right;
+  margin-top:35px;
+  padding-right:40px;
+  font-size:26px;
+  color:var(--maroon);
+  opacity:0;
+  animation:fadeIn 2s ease forwards;
+  animation-delay:2.6s;
+}
+
+.signature span{
+  font-size:34px;
+  letter-spacing:4px;
+}
+
+/* Diyas */
+.diya{
+  position:fixed;
+  bottom:30px;
+  width:70px;
+  height:45px;
+  background:#8b4513;
+  border-radius:0 0 40px 40px;
+}
+
+.diya::before{
+  content:"";
+  position:absolute;
+  top:-26px;
+  left:50%;
+  transform:translateX(-50%);
+  width:18px;
+  height:30px;
+  background:radial-gradient(circle,#ffd27d,#ff8c00);
+  border-radius:50%;
+  animation:flicker .8s infinite alternate;
+}
+
+.left{left:30px;}
+.right{right:30px;}
+
+@keyframes flicker{
+  from{transform:translateX(-50%) scale(1);}
+  to{transform:translateX(-50%) scale(1.2);}
+}
+
+@keyframes unroll{
+  from{transform:scaleY(0);}
+  to{transform:scaleY(1);}
+}
+
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+@keyframes rotate{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="mandala"></div>
+
+<div class="diya left"></div>
+<div class="diya right"></div>
+
+<div class="scroll-wrapper">
+<div class="scroll">
+
+  <div class="title">
+    <h1>শুভ বিবাহিত জীবন</h1>
+  </div>
+
+  <div class="names">
+    Shyan <span>❤️</span> Piya
+  </div>
+
+  <div class="photos">
+    <div class="photo"><img src="img1.png"></div>
+    <div class="photo"><img src="img2.png"></div>
+  </div>
+
+  <div class="message">
+   <br><br>
+
+    আজ তোমাদের একসাথে নতুন জীবনের শুরু দেখে
+    আমার হৃদয় ভরে উঠছে গর্ব আর ভালোবাসায়।
+    সংসারের প্রতিটি দিনে যেন তোমরা
+    একে অপরের শক্তি, শান্তি আর আশ্রয় হয়ে থাকো।<br><br>
+
+    ভালোবাসা, বিশ্বাস আর সম্মানের বন্ধনে
+    তোমাদের পথচলা হোক চিরদিনের।
+    হাসি, ধৈর্য আর যত্নে ভরে উঠুক
+    তোমাদের ছোট্ট সুন্দর সংসার।
+  </div>
+
+  <div class="signature">
+    অফুরন্ত ভালোবাসা ,<br>
+    <span>পিউ</span>
+  </div>
+
+</div>
+</div>
+
+</body>
+</html>
